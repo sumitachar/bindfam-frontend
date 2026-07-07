@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy | BindFam Global</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* =========================================
+       MULTINATIONAL THEME VARIABLES
+    ========================================= */
+    :root {
+      --color-primary: #007fff;    /* Azure Blue */
+      --color-secondary: #4bbf73;  /* Kalley Green */
+      --color-text: #111827;       /* Deep Slate */
+      --color-muted: #6b7280;      /* Neutral Gray */
+      --bg-body: #ffffff;
+      --bg-subtle: #f9fafb;
+      --border-color: #e5e7eb;
+      --shadow-premium: 0 4px 20px rgba(0, 0, 0, 0.05);
+      --font-main: 'Inter', -apple-system, sans-serif;
+    }
+
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--font-main);
+      background-color: var(--bg-body);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+
+    /* =========================================
+       GLOBAL NAVIGATION BAR
+    ========================================= */
+    .nav-header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .brand {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      text-decoration: none;
+    }
+    .brand .bind { color: var(--color-primary); }
+    .brand .fam { color: var(--color-secondary); }
+
+    .nav-status {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* =========================================
+       HERO SECTION
+    ========================================= */
+    .hero {
+      padding: 100px 5% 60px;
+      text-align: center;
+      background: radial-gradient(circle at top right, rgba(0,127,255,0.05), transparent),
+                  radial-gradient(circle at top left, rgba(75,191,115,0.05), transparent);
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin: 0 0 1rem;
+      letter-spacing: -0.04em;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.25rem;
+      color: var(--color-muted);
+    }
+
+    /* =========================================
+       LAYOUT CONTAINER
+    ========================================= */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 60px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 5%;
+    }
+
+    /* Sidebar Nav */
+    .sidebar {
+      position: sticky;
+      top: 120px;
+      height: fit-content;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      border-left: 2px solid var(--border-color);
+    }
+
+    .sidebar li {
+      padding: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px 0 10px 20px;
+      text-decoration: none;
+      color: var(--color-muted);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      margin-left: -2px;
+      border-left: 2px solid transparent;
+    }
+
+    /* ACTIVE TAB CLASS */
+    .sidebar a.active {
+      color: var(--color-primary);
+      border-left: 2px solid var(--color-primary);
+      background: linear-gradient(90deg, rgba(0, 127, 255, 0.05), transparent);
+    }
+
+    /* Content Area */
+    .content-section { margin-bottom: 100px; }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2::before {
+      content: '';
+      width: 4px;
+      height: 32px;
+      background: var(--color-secondary);
+      border-radius: 2px;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin-top: 2rem;
+      color: var(--color-text);
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: var(--shadow-premium);
+      margin-top: 1.5rem;
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .feature-item strong {
+      display: block;
+      color: var(--color-text);
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+
+    .icon-check {
+      color: var(--color-secondary);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    /* =========================================
+       FOOTER & CONTACT
+    ========================================= */
+    .contact-cta {
+      background: var(--bg-subtle);
+      border-radius: 30px;
+      padding: 60px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      color: white;
+      padding: 18px 45px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 10px 20px rgba(0, 127, 255, 0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-primary:hover { 
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(0, 127, 255, 0.3);
+    }
+
+    footer {
+      padding: 80px 5% 40px;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      color: var(--color-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 1024px) {
+      .main-grid { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+      .hero h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-header">
+    <a href="#" class="brand">
+      <span class="bind">Bind</span><span class="fam">Fam</span>
+    </a>
+    <div class="nav-status">Compliance: GDPR / HIPAA / COPPA</div>
+  </nav>
+
+  <header class="hero">
+    <p style="text-transform: uppercase; letter-spacing: 2px; font-weight: 700; font-size: 0.8rem; color: var(--color-primary); margin-bottom: 10px;">Security First Ecosystem</p>
+    <h1>Our <span class="gradient-text">Privacy Standard</span></h1>
+    <p>BindFam Global is dedicated to shielding your family's digital footprint through advanced encryption and ethical data governance.</p>
+  </header>
+
+  <main class="main-grid">
+    <aside class="sidebar">
+      <ul id="sidebar-nav">
+        <li><a href="#data-collection">1. Data Collection</a></li>
+        <li><a href="#data-usage">2. Data Utilization</a></li>
+        <li><a href="#sharing">3. Sharing & Consent</a></li>
+        <li><a href="#security">4. Security Protocols</a></li>
+        <li><a href="#ai-ethics">5. AI Ethics & Logic</a></li>
+        <li><a href="#children">6. Children's Rights</a></li>
+        <li><a href="#retention">7. Data Retention</a></li>
+        <li><a href="#your-rights">8. Your Sovereignty</a></li>
+      </ul>
+    </aside>
+
+    <div class="content">
+      <section id="data-collection" class="content-section">
+        <h2>Information We Collect</h2>
+        <p>We collect only the essential data required to synchronize your family life and ensure safety.</p>
+        <div class="card">
+          <div class="feature-item">
+            <span class="icon-check">✓</span>
+            <span><strong>Family Profile Intelligence</strong> Names, relationships, and biometric photos for authenticated profile access.</span>
+          </div>
+          <div class="feature-item">
+            <span class="icon-check">✓</span>
+            <span><strong>Secure Health Vault</strong> Medical history, immunization logs, and prescriptions for the Medical Care tracker.</span>
+          </div>
+          <div class="feature-item">
+            <span class="icon-check">✓</span>
+            <span><strong>Multimedia Assets</strong> Encrypted photos and videos posted to your private Family Memory Wall.</span>
+          </div>
+          <div class="feature-item">
+            <span class="icon-check">✓</span>
+            <span><strong>Financial Metadata</strong> Categorized spending trends and budget limits within the Expense Tracker.</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="data-usage" class="content-section">
+        <h2>How We Use Your Data</h2>
+        <p>Data processing is localized to your family unit to provide highly personalized automation.</p>
+        <div class="card" style="background-color: var(--bg-subtle);">
+          <div class="feature-item"><span class="icon-check">✓</span> <strong>Milestone Tracking:</strong> Using development data to provide age-appropriate learning goals.</div>
+          <div class="feature-item"><span class="icon-check">✓</span> <strong>Predictive Reminders:</strong> Notifying you of vaccine schedules and document expiries (Passports/IDs).</div>
+          <div class="feature-item"><span class="icon-check">✓</span> <strong>Shopping Optimization:</strong> Generating curated newborn lists based on age-specific needs.</div>
+        </div>
+      </section>
+
+      <section id="sharing" class="content-section">
+        <h2>Sharing & Consent</h2>
+        <p>Transparency is our foundation. We never monetize your family's personal information.</p>
+        <div class="card">
+          <h3>Professional Integration</h3>
+          <p>Medical records are shared with "Doctor Connect" professionals <strong>only</strong> after you initiate a secure handshake and grant timed access.</p>
+          <h3>Internal Permissions</h3>
+          <p>The Family Admin manages granular controls, deciding which members can view specific health logs or financial reports.</p>
+        </div>
+      </section>
+
+      <section id="security" class="content-section">
+        <h2>Security Protocols</h2>
+        <p>We deploy enterprise-grade shields to ensure your data remains inaccessible to unauthorized parties.</p>
+        <div class="card" style="border-left: 5px solid var(--color-primary);">
+          <ul style="list-style: none; padding: 0;">
+            <li class="feature-item"><strong>Zero-Knowledge Encryption:</strong> We cannot see your private documents; only you hold the keys.</li>
+            <li class="feature-item"><strong>Hardware Security:</strong> Support for FaceID, TouchID, and Physical Security Keys (MFA).</li>
+            <li class="feature-item"><strong>OCR Anonymization:</strong> Document scanning occurs via on-device processing where possible to limit cloud exposure.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="ai-ethics" class="content-section">
+        <h2>AI Ethics & Logic</h2>
+        <p>Our AI-powered features (Photo sorting, Health insights) are designed with "Privacy by Design."</p>
+        <div class="card">
+          <p>BindFam AI does not use your family photos or medical data to train "Global Models." All learning is localized to your family group to ensure your private life never leaves your account's digital perimeter.</p>
+        </div>
+      </section>
+
+      <section id="children" class="content-section">
+        <h2>Children's Rights (COPPA/GDPR)</h2>
+        <p>As an app focused on parenting, we treat child data with "Special Category" protection.</p>
+        <div class="card">
+          <p>All data concerning minors is managed by a verified Guardian. We do not permit social sharing of child data outside the family hub without explicit, multi-step parental verification.</p>
+        </div>
+      </section>
+
+      <section id="retention" class="content-section">
+        <h2>Data Retention</h2>
+        <p>How long we keep your information depends on its purpose.</p>
+        <div class="card">
+          <ul style="list-style: none; padding: 0;">
+            <li class="feature-item"><strong>Active Records:</strong> Retained as long as your account is active.</li>
+            <li class="feature-item"><strong>Deleted Content:</strong> Purged from our active servers within 30 days of deletion.</li>
+            <li class="feature-item"><strong>Account Closure:</strong> Upon account termination, all family data is permanently wiped after a 60-day "Safety Grace Period."</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="your-rights" class="content-section">
+        <h2>Your Sovereignty</h2>
+        <div class="card">
+          <p>You have the right to <strong>Data Portability</strong>. Export your entire family legacy, including the Memory Wall and Health Records, into a standard format (JSON/PDF/CSV) at any time. We believe you should never be "locked in" to a platform.</p>
+        </div>
+      </section>
+
+      <section class="contact-cta">
+        <h2>Questions for our Privacy Office?</h2>
+        <p>Our global compliance team is available to discuss your data safety.</p>
+        <a href="mailto:support@bindfam.com" class="btn-primary">Inquire at support@bindfam.com</a>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 BindFam. All rights reserved.</p>
+    <!-- <p style="margin-top: 10px; opacity: 0.5;">BindFam, the BindFam Logo, Azure Blue and Kalley Green are trademarks of BindFam Global.</p> -->
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5 // Highlight when 50% of the section is visible
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const id = entry.target.getAttribute('id');
+          const sidebarLink = document.querySelector(`.sidebar a[href="#${id}"]`);
+          
+          if (entry.isIntersecting) {
+            // Remove active class from all
+            document.querySelectorAll('.sidebar a').forEach(link => link.classList.remove('active'));
+            // Add to the current one
+            if (sidebarLink) sidebarLink.classList.add('active');
+          }
+        });
+      }, observerOptions);
+
+      // Track all sections
+      document.querySelectorAll('.content-section').forEach((section) => {
+        observer.observe(section);
+      });
+
+      // Manual click highlight (to make it instant)
+      document.querySelectorAll('.sidebar a').forEach(link => {
+        link.addEventListener('click', function() {
+          document.querySelectorAll('.sidebar a').forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

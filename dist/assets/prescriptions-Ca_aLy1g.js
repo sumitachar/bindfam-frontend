@@ -1,0 +1,7 @@
+import{c as o,i as e}from"./index-CWP3SedY.js";/**
+ * @license lucide-react v0.545.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const a=[["path",{d:"M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z",key:"c7niix"}]],n=o("droplet",a),i=async t=>{try{return(await e.get("/prescriptions/list",{params:t?{subUserId:t}:{}})).data}catch(r){throw console.error("Error fetching prescriptions:",r),r}},p=async t=>{try{return(await e.post("/prescriptions/create",t,{headers:{"Content-Type":"multipart/form-data"}})).data}catch(r){throw console.error("Error adding prescription:",r),r}},d=async(t,r)=>{try{return(await e.patch(`/prescriptions/update/${t}`,r,{headers:{"Content-Type":"multipart/form-data"}})).data}catch(s){throw console.error("Error updating prescription:",s),s}},l=async t=>{try{return await e.delete(`/prescriptions/delete/${t}`),{success:!0}}catch(r){throw console.error("Error deleting prescription:",r),r}},u=async t=>{if(!t)return"/images/fallback-prescription.png";try{return(await e.get(`/prescriptions/view/${t}`)).data.url}catch(r){return console.warn(`Failed to fetch secure URL for prescription ${t}:`,r),"/images/fallback-prescription.png"}};export{n as D,p as a,u as b,l as d,i as g,d as u};
+//# sourceMappingURL=prescriptions-Ca_aLy1g.js.map

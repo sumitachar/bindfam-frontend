@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Bind Fam</title>
+
+    <meta name="theme-color" content="#ffffff" />
+    
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+
+    <meta name="color-scheme" content="light" />
+    <meta name="supported-color-schemes" content="light" />
+
+    <style>
+      /* Hard-lock scrollbars and system context menus to light */
+      :root {
+        color-scheme: light !important;
+      }
+
+      /* Prevent "flash of dark" during load */
+      html, body {
+        background-color: #ffffff !important;
+        background: #ffffff !important;
+        color: #1f2937 !important;
+      }
+    </style>
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Bind Fam" />
+
+    <link rel="manifest" href="/app/manifest.json" />
+    <link rel="icon" href="/app/favicon.ico" />
+    <link rel="apple-touch-icon" href="/app/icons/icon-192x192.png" />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/app/assets/index-CWP3SedY.js"></script>
+    <link rel="modulepreload" crossorigin href="/app/assets/vendor-dUYnP3YU.js">
+    <link rel="stylesheet" crossorigin href="/app/assets/index-i9EP8mk6.css">
+  <link rel="manifest" href="/app/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/app/registerSW.js"></script></head>
+
+  <body class="bg-white text-slate-900">
+    <div id="root"></div>
+  </body>
+</html>

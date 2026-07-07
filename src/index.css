@@ -1,0 +1,287 @@
+/* =========================================
+   Import TailwindCSS & Animation Plugin
+========================================= */
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* =========================================
+   LIGHT THEME VARIABLES (DEFAULT)
+   Final Theme: Ivory White + Azure Blue + Kalley Green
+========================================= */
+:root {
+  --color-primary: #007fff; /* Azure Blue */
+  --color-secondary: #4bbf73; /* Kalley Green */
+  --color-accent: #007fff; /* Ivory White (Soft Accent) */
+
+  --color-neutral: #656b78;
+  --color-text: #1f2937;
+  --color-warning: #ff6b6b; /* Coral Red */
+
+  --color-bind: #007fff; /* Bind Blue */
+  --color-fam: #4bbf73; /* Kalley Green */
+
+  --bg-gradient: #ffffff; /* Always White Background */
+  --bg-card: #ffffff; /* Card Background */
+  --bg-input: #f5f7fa; /* Input Background */
+  --border-soft: #d4d4d4; /* Soft Border */
+
+  /* Glass Card (No Blur) */
+  --glass-bg: rgb(255, 255, 255);
+  --glass-border: rgba(200, 200, 200, 0.4);
+  --glass-shadow: rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+   BASE STYLES
+========================================= */
+body {
+  background: var(--bg-gradient) !important;
+  background-color: #ffffff !important; /* ALWAYS PURE WHITE */
+  color: var(--color-text);
+  min-height: 100vh;
+  font-family: "Inter", system-ui, sans-serif;
+  transition: color 0.3s ease;
+}
+
+/* Clean Input Focus */
+input,
+textarea,
+select,
+button {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* =========================================
+   CUSTOM UTILITIES
+========================================= */
+@layer utilities {
+  .bg-primary-gradient {
+    background-image: linear-gradient(135deg, #007fff, #4bbf73);
+  }
+
+  .bg-ocean-gradient {
+    background-image: linear-gradient(135deg, #007fff, #52d2f7);
+  }
+
+  .bg-forest-gradient {
+    background-image: linear-gradient(135deg, #4bbf73, #2fa85a);
+  }
+
+  .bg-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-soft);
+  }
+
+  .bg-input {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-soft);
+    border-radius: 1rem;
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+
+  .text-accent {
+    color: var(--color-accent);
+  }
+
+  .text-bind {
+    color: var(--color-bind);
+  }
+
+  .text-fam {
+    color: var(--color-fam);
+  }
+
+  .text-muted {
+    color: var(--color-neutral);
+  }
+
+  /* ======================================
+     GLASS CARD (NO BLUR VERSION)
+  ====================================== */
+  .glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    /* border-radius: 20px; */
+    box-shadow: 0 4px 20px var(--glass-shadow);
+    padding: 1rem;
+    transition: 0.3s ease;
+  }
+
+  .glass-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 6px 25px rgba(0, 127, 255, 0.18);
+  }
+
+  /* Calendar button */
+  .calendar-button {
+    background: linear-gradient(135deg, #007fff, #4bbf73);
+    color: white;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: 1rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .calendar-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+  }
+
+  .calendar-button:active {
+    transform: scale(0.98);
+    opacity: 0.95;
+  }
+
+  /* Buttons */
+  .button-primary {
+    background-image: linear-gradient(135deg, #007fff, #4bbf73);
+    color: white;
+    border-radius: 1rem;
+    transition: transform 0.2s ease;
+  }
+
+  .button-primary:hover {
+    transform: scale(1.02);
+  }
+
+  .button-secondary {
+    background-image: linear-gradient(135deg, #4bbf73, #2fa85a);
+    color: white;
+  }
+
+  .cancel-button {
+    background-image: linear-gradient(135deg, #ff6b6b, #ff3b3b);
+    color: white;
+  }
+
+  .button-accent {
+    background-image: linear-gradient(135deg, #fffff0, #f3e9b4);
+    color: #1f2937;
+  }
+
+  .shadow-soft {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  }
+
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+
+  .toast {
+    background: #ffffff !important;
+    border: 1px solid var(--border-soft) !important;
+    border-radius: 0.75rem !important;
+  }
+
+  .toast button {
+    background-image: linear-gradient(135deg, #007fff, #4bbf73);
+    color: white !important;
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, #007fff, #4bbf73, #fffff0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-thumb-primary\/30::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 127, 255, 0.3);
+    border-radius: 10px;
+  }
+
+  .scrollbar-thumb-primary\/30::-webkit-scrollbar {
+    width: 6px;
+  }
+
+
+  
+}
+
+/* =========================================
+   DARK MODE (DEEP DARK BLUE THEME)
+========================================= */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #4ae4ff; 
+    --color-secondary: #7fffb1; 
+    --color-accent: #e8f6ff; 
+
+    --color-neutral: #aeb7c6;
+    --color-text: #f0f4ff;
+
+    --bg-gradient: #0a1a2f; 
+    --bg-card: #142034;
+    --bg-input: #1d2c45;
+    --border-soft: #32435b;
+
+    --glass-bg: rgb(10, 25, 45);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: rgba(0, 0, 0, 0.4);
+  }
+
+  body {
+    background: var(--bg-gradient) !important;
+    color: var(--color-text);
+  }
+
+  .bg-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-soft);
+  }
+
+  .bg-input {
+    background-color: var(--bg-input);
+  }
+
+  .button-primary {
+    background-image: linear-gradient(135deg, #4ae4ff, #7ba7ff);
+  }
+
+  .button-secondary {
+    background-image: linear-gradient(135deg, #7fffb1, #24d47c);
+  }
+
+  .button-accent {
+    background-image: linear-gradient(135deg, #7ba7ff, #4ae4ff);
+  }
+
+  .toast {
+    background-color: #142034 !important;
+    border-color: var(--border-soft) !important;
+  }
+
+  .glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px var(--glass-shadow);
+    padding: 1.5rem;
+    transition: 0.3s ease;
+  }
+
+  .glass-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 6px 25px rgba(0, 127, 255, 0.18);
+  }
+} */
